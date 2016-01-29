@@ -1,0 +1,24 @@
+{
+  "name": "twitter-leads",
+  "version": "1.0.0",
+  "description": "Pull list of leads from a Twitter Ads Lead Generation Card",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bevacqua/twitter-leads.git"
+  },
+  "author": "Nicolas Bevacqua <nicolasbevacqua@gmail.com> (http://bevacqua.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bevacqua/twitter-leads/issues"
+  },
+  "homepage": "https://github.com/bevacqua/twitter-leads",
+  "dependencies": {
+    "cheerio": "0.19.0",
+    "contra": "1.9.1",
+    "csv-parse": "1.0.1",
+    "html-md": "3.0.2",
+    "lodash": "4.1.0",
+    "request": "2.69.0"
+  }
+}
