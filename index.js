@@ -38,6 +38,7 @@ function leads (options, done) {
     },
     function parse (res, body, next) {
       var config = {
+        relax: true,
         columns: true,
         auto_parse: true,
         auto_parse_date: true
