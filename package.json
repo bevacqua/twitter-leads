@@ -1,6 +1,6 @@
 {
   "name": "twitter-leads",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pull list of leads from a Twitter Ads Lead Generation Card",
   "main": "index.js",
   "repository": {
