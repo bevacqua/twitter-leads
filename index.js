@@ -1,6 +1,6 @@
 'use strict';
 
-var sort = require('lodash/sortBy');
+var sortBy = require('lodash/sortBy');
 var url = require('url');
 var util = require('util');
 var contra = require('contra');
@@ -49,7 +49,7 @@ function leads (options, done) {
       if (o.since) {
         data = data.filter(byDate);
       }
-      next(null, sort(data.map(toModel), 'time'));
+      next(null, sortBy(data.map(toModel), 'time'));
     }
   ], done);
   function byDate (lead) {

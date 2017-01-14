@@ -14,11 +14,10 @@
   },
   "homepage": "https://github.com/bevacqua/twitter-leads",
   "dependencies": {
-    "cheerio": "0.19.0",
-    "contra": "1.9.1",
-    "csv-parse": "1.1.7",
-    "html-md": "3.0.2",
-    "lodash": "4.1.0",
-    "request": "2.69.0"
+    "cheerio": "0.22.0",
+    "contra": "1.9.4",
+    "csv-parse": "1.1.9",
+    "lodash": "4.17.4",
+    "request": "2.79.0"
   }
 }
