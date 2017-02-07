@@ -1,5 +1,6 @@
 'use strict';
 
+var contentType = require('content-type');
 var sortBy = require('lodash/sortBy');
 var url = require('url');
 var util = require('util');
@@ -43,13 +44,22 @@ function leads (options, done) {
         auto_parse: true,
         auto_parse_date: true
       };
+      if (res.statusCode < 200 || res.statusCode >= 300) {
+        next(null, []);
+        return;
+      }
+      var parsedContentType = contentType.parse(res).type;
+      if (parsedContentType !== 'application/csv') {
+        next(null, []);
+        return;
+      }
       csv(body, config, next);
     },
     function parsed (data, next) {
-      if (o.since) {
-        data = data.filter(byDate);
-      }
-      next(null, sortBy(data.map(toModel), 'time'));
+      var filtered = o.since ? data.filter(byDate) : data;
+      var models = filtered.map(toModel);
+      var sorted = sortBy(models, 'time');
+      next(null, sorted);
     }
   ], done);
   function byDate (lead) {

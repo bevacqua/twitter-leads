@@ -15,6 +15,7 @@
   "homepage": "https://github.com/bevacqua/twitter-leads",
   "dependencies": {
     "cheerio": "0.22.0",
+    "content-type": "1.0.2",
     "contra": "1.9.4",
     "csv-parse": "1.1.9",
     "lodash": "4.17.4",
